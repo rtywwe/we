@@ -1,0 +1,313 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from photo.minwt.com/file/sampleView/jQuery/clicklist/clicklist.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Jun 2019 14:28:04 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="all" name="minwt" />
+<meta name="author" content="男丁格爾&梅干扣肉" />
+<meta name="Copyright" content="www.minwt.com版權所有" />
+<meta name="keywords" content="梅問題,教學網,photoshop教學,flex教學,javascript教學,css教學,網頁教學,架站教學,wordperss教學,jQuery教學">
+
+<title>Bitmarket</title>
+<script src="js/jquery.js" language="javascript"></script>
+<script>
+$(function(){
+	$(".menu li a").click(function(){
+		var _this=$(this);
+		if(_this.next("ul").length>0){
+			if(_this.next().is(":visible")){
+				//隱藏子選單並替換符號
+				_this.html(_this.html().replace("▼","►")).next().hide();
+			}else{
+				//開啟子選單並替換符號
+				_this.html(_this.html().replace("►","▼")).next().show();
+			}
+			//關閉連結
+			return false;
+		}
+	});
+	$("a").focus( function(){
+		$(this).blur();
+	});
+});
+</script>
+<style>
+a{color:#333333; text-decoration:none; font-size:12px;}
+a:hover{text-decoration:underline;}
+ul{margin:0;padding:0;list-style-type: none;}
+ul.submenu{display:none;}
+ul.submenu{margin-left:25px;list-style-type:disc; color:#333333;}
+<!----->
+#container {width:1000px}
+/* 以下是header區放置logo與banner主圖的css*/
+#header {
+background-color:#FFFFFF;
+}
+#logo {
+float:left;/*飄移logo圖至同div區塊的左邊，這樣才不會擠斷後方的元素到下一列*/
+}
+h1 {
+margin-bottom:0;
+font-size:24px;padding:3px;text-align:center;
+}
+#menu {
+clear:both;/*消除之前float浮移區,這樣後方的menu DIV 才能重啟始浮移位置*/
+background-color:#FFFFFF;
+height:1000px;width:15%;
+float:left;
+font-size:12px;
+}
+/* 以下是主要內容區css*/
+#content {
+background-color:#fff;height:200px;width:78%;float:left;
+}
+/*news區*/
+#left2 {float:left;margin:24px 6px;}
+#news {
+	border: 1px solid #632d00;
+	border-bottom: 8px solid #04b2a0;
+	padding: 0px;
+	font-size:10px;
+	width:160px;
+	}
+	
+.news_title h2{
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 1em;
+	margin:0;
+	padding: 7px 0 0 30px;
+	}
+.news_title {
+	background-image:url(./img/tab01.gif);
+	color: yellow;
+	height: 20px;
+	text-align: left;
+	width:162px;
+	padding: 0px;
+	}
+	
+.more_link {
+	padding:0px; margin-left:80px;
+	font-size:8px;
+	}
+dl {
+	border-bottom: dotted 2px #632d00;
+	clear: both;
+	margin: 0;
+	padding: 3px 0;
+	}
+	
+dt {
+	color: #fe9901;
+	float: left;
+	margin: 0;
+	padding: 0;
+	width: 5em;
+	}
+	
+dd {
+	margin: 0;
+	padding: 0;
+	margin-left: 5em;
+	}
+	
+.dl_bottom {
+	border-bottom: 1px solid #FFF;
+	}
+	
+/*以下是商品區*/
+#right2 {float:left;margin:0px 100px;}
+#products {
+	border: 1px solid #FFFFFF;
+	border-bottom: 1px solid #FFFFFF;
+	padding: 0;
+	font-size:12px;
+	width:180px;height:100px;
+	}
+	
+.products_title h2{
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 1em;
+	margin:0;
+	padding: 7px 0 0 30px;
+	}
+.products_title {
+	background: url(./img/tab02.gif) no-repeat;
+	color: yellow;
+	height: 20px;
+	width:182px;
+	padding: 0;
+	}
+	
+	
+.products_box {
+	margin: 10px 10px;
+	padding: 0;
+	width: 250px;
+	float:left;
+	}
+	
+	
+/* 以下是底腳區css*/
+#footer {
+background-color:#FFD52b;clear:both;text-align:center;
+font-size:11px;/*不是主要重點就調小文字*/
+}
+/* 以下是menu選單區css*/
+#nav {
+margin:0;
+padding:0;
+list-style-type:none;
+width:100px;
+}
+#nav li a { 
+text-decoration: none;
+display:block;/*設定為區塊*/
+padding:3px 6px;
+border-bottom: 1px solid #632d00;
+}
+#nav li a.active, #nav li a:hover {
+background:#eee;/*滑鼠滑入處變色*/
+color:#333;
+}
+a{color:#333333; text-decoration:none; font-size:12px;}
+a:hover{text-decoration:underline;}
+ul{margin:0;padding:0;list-style-type: none;}
+ul.submenu{display:none;}
+ul.submenu{margin-left:25px;list-style-type:disc; color:#333333;}
+</style>
+
+</head>
+
+<body>
+<!--
+<ul class="menu">
+	 <li>
+    	<a href="http://www.minwt.com/">►有問題(minwt) </a>
+    	<ul class="submenu">
+        	<li><a href="http://www.minwt.com/" target="_blank">梅問題教學網</a></li>
+            <li><a href="http://www.minwt.com/tools" target="_blank">梅問題工具網</a></li>
+        </ul>
+    </li>
+	<li>
+    	<a href="http://blog.xuite.net/abgne/diary1">►男丁格爾(abgne)</a>
+    	<ul class="submenu">
+        	<li><a href="http://blog.xuite.net/abgne/diary1" target="_blank">男丁格爾's 脫殼玩</a></li>
+            <li><a href="http://www.flycan.com.tw/course/jquery.php" target="_blank">jQuery互動網頁程式應用班</a></li>
+            <li><a href="http://www.flycan.com.tw/course/course_javascript.php" target="_blank">JavaScript 程式設計入門班</a></li>            
+        </ul>
+    </li>
+    <li>
+    	<a href="http://www.flycan.com/">►飛肯設計學宛(Flycan)</a>
+    	<ul class="submenu">
+        	<li><a href="http://www.flycan.com.tw/course/course.php" target="_blank">最新開課表</a></li>
+            <li><a href="http://www.flycan.com.tw/board/modules/newbb/index.php?cat=4" target="_blank">教學文章</a></li>
+            <li><a href="http://www.flycan.com.tw/board/" target="_blank">教學論壇</a></li>
+            <li><a href="http://www.flycan.com.tw/course/consultation.php" target="_blank">課程咨詢</a></li>
+        </ul>
+    </li>    
+</ul>
+-->
+<div id="container" >
+<ul class="menu">
+<!-- ▼以下DIV區是主圖banner區▼ -->
+<div id="header">
+<div id='logo'><img class='' src=""  width="" height=""> </div> 
+<a href="index.html"><strong><font size="10"><font color="#FF8800">比特市集</font></font></strong></a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#FF8800">h6cz5scenkhrvrlr.onion</font>
+<a href=""><p align="center"><strong><font size="6"><font color="#FF8800">商品區</font></font></strong></p></a>
+<br><br>
+
+</div>
+
+<!-- ▼以下DIV區是選單區▼ -->
+<div id="menu" >
+<ul id="nav">
+<br><br><br>
+<!--<strong><font size="5"><font color="#FF8800">規則說明</font></font></strong>
+<strong><font size="5"><font color="#FF8800">規則說明</font></font></strong>
+<!--<li><a href="#"><font size="3">►藥物</font></a>
+    	<ul class="submenu">
+        	
+         <li><a href="#"><font size="3">►大麻</font></a>
+    	<ul class="submenu">
+        	<li><a href="page6.html" target="_blank">花</a></li>
+        	<li><a href="" target="_blank">種子</a></li>
+        	<!--<li><a href="page7.html" target="_blank">clone</a></li>
+        	<li><a href="page9.html" target="_blank">大麻濃縮物</a></li>
+            
+        </ul>
+		</li> 
+		<li><a href="page15.html" target="_blank">LSD</a></li>  
+		<li><a href="page16.html" target="_blank">MDMA</a></li>  
+		<li><a href="" target="_blank">Ritalin</a></li> 
+        </ul>
+		</li>-->
+<!--<li><a href="#"><font size="3">►藥物</font></a>
+    	<ul class="submenu">
+        	<li><a href="clicklist.html" target="_blank">健保卡</a></li>
+            
+        </ul>
+</li>
+<li><a href="#"><font size="3">►器材</font></a>
+    	<ul class="submenu">
+        	<li><a href="clicklist.html" target="_blank">健保卡</a></li>
+            
+        </ul>
+</li>
+<li><a href="#"><font size="3">►數位產品</font></a>
+    	<ul class="submenu">
+        	<li><a href="clicklist.html" target="_blank">健保卡</a></li>
+            
+        </ul>
+</li>-->
+<!--<a href="page4.html"><font size="3">連絡我</font></a>-->
+<strong><a href="page3.html"><font size="5"><font color="#FF8800">規則說明</font></font></a></strong>
+<br><br>
+<strong><a href="page4.html"><font size="3"><font color="#FF8800">聯絡我&購買</font></font></a></strong>
+</div>
+</ul>
+<div id="right2">
+<div class="products_title"><h2></h2></div>
+
+<div id="products">
+<div class="products_box">
+<a href="page10.html"><img style="border:5px groove gold;"  src="img/dowm10.jpg"  width="800px" height="800px" /></a>
+<p><a href="page10.html"><br></a></p>
+<br>商品名稱：<a href="page1.html"><font color="#000000"><u>利他能Ritalin 10mg</u></font></a></br>
+<br>編號：R01</br>
+<br>發貨地驗證：台灣</br>
+<br>庫存數量：200</br>
+<br>最低購買數量和價格：15顆/1500台幣</br>
+<br>其他購買數量和價格：無</br>
+<br>發貨地：台灣</br>
+<br>可發貨至：台灣</br>
+<br>不發貨至：海外</br>
+<br>寄送天數：2-3天
+<br>注意事項 ：無</br>
+<br>商品描述：
+<br>中樞神經系統興奮劑，有效緩解長期飛行🍃的疲倦感、顯著提升短期記憶力！
+ • 適應症：注意力缺失症(ADD)、注意力不足過動症(ADHD)、發作性嗜睡症。
+ • 藥效約4-6小時
+ • 使用方法：以口服為主，亦有追求更佳效果者磨粉以鼻吸方式使用。
+
+</br>
+<input type="button" value="返回頂部" onclick="location.href='clicklist.html'">
+</div>
+
+</div></div>
+<!-- ▲以上是商品區▲ -->
+
+</div>
+<!-- ▲以上內容商end▲ -->
+<div id="footer">
+ © Copyright 比特市集 - All Rights Reserved</div>
+
+</div>
+</body>
+
+<!-- Mirrored from photo.minwt.com/file/sampleView/jQuery/clicklist/clicklist.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Jun 2019 14:28:04 GMT -->
+</html>
